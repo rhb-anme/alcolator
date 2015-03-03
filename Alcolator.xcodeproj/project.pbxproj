@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54B77B521AA61D7E0061164A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 54B77B4F1AA61D7E0061164A /* background.png */; };
+		54B77B531AA61D7E0061164A /* calculate.png in Resources */ = {isa = PBXBuildFile; fileRef = 54B77B501AA61D7E0061164A /* calculate.png */; };
+		54B77B541AA61D7E0061164A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 54B77B511AA61D7E0061164A /* logo.png */; };
 		F5BFFA051AA4A63900F3B165 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BFFA041AA4A63900F3B165 /* main.m */; };
 		F5BFFA081AA4A63900F3B165 /* BLCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BFFA071AA4A63900F3B165 /* BLCAppDelegate.m */; };
 		F5BFFA0B1AA4A63900F3B165 /* BLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BFFA0A1AA4A63900F3B165 /* BLCViewController.m */; };
 		F5BFFA101AA4A63900F3B165 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BFFA0F1AA4A63900F3B165 /* Images.xcassets */; };
 		F5BFFA131AA4A63900F3B165 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5BFFA111AA4A63900F3B165 /* LaunchScreen.xib */; };
 		F5BFFA1F1AA4A63A00F3B165 /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BFFA1E1AA4A63A00F3B165 /* AlcolatorTests.m */; };
+		F5CF5B721AA55140002A956D /* BLCMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CF5B711AA55140002A956D /* BLCMainMenuViewController.m */; };
 		F5DFA18F1AA4D1D900F70E62 /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DFA18E1AA4D1D900F70E62 /* BLCWhiskeyViewController.m */; };
-		F5DFA1911AA4DC7700F70E62 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F5DFA1901AA4DC7700F70E62 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54B77B4F1AA61D7E0061164A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		54B77B501AA61D7E0061164A /* calculate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculate.png; sourceTree = "<group>"; };
+		54B77B511AA61D7E0061164A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F5BFF9FF1AA4A63900F3B165 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BFFA031AA4A63900F3B165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5BFFA041AA4A63900F3B165 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,9 +46,10 @@
 		F5BFFA181AA4A63A00F3B165 /* AlcolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BFFA1D1AA4A63A00F3B165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5BFFA1E1AA4A63A00F3B165 /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
-		F5DFA18D1AA4D1D900F70E62 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWhiskeyViewController.h; sourceTree = "<group>"; };
-		F5DFA18E1AA4D1D900F70E62 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWhiskeyViewController.m; sourceTree = "<group>"; };
-		F5DFA1901AA4DC7700F70E62 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		F5CF5B701AA55140002A956D /* BLCMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCMainMenuViewController.h; path = ../BLCMainMenuViewController.h; sourceTree = "<group>"; };
+		F5CF5B711AA55140002A956D /* BLCMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCMainMenuViewController.m; path = ../BLCMainMenuViewController.m; sourceTree = "<group>"; };
+		F5DFA18D1AA4D1D900F70E62 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCWhiskeyViewController.h; path = ../BLCWhiskeyViewController.h; sourceTree = "<group>"; };
+		F5DFA18E1AA4D1D900F70E62 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCWhiskeyViewController.m; path = ../BLCWhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +73,6 @@
 		F5BFF9F61AA4A63900F3B165 = {
 			isa = PBXGroup;
 			children = (
-				F5DFA18D1AA4D1D900F70E62 /* BLCWhiskeyViewController.h */,
-				F5DFA18E1AA4D1D900F70E62 /* BLCWhiskeyViewController.m */,
 				F5BFFA011AA4A63900F3B165 /* Alcolator */,
 				F5BFFA1B1AA4A63A00F3B165 /* AlcolatorTests */,
 				F5BFFA001AA4A63900F3B165 /* Products */,
@@ -86,11 +91,14 @@
 		F5BFFA011AA4A63900F3B165 /* Alcolator */ = {
 			isa = PBXGroup;
 			children = (
-				F5DFA1901AA4DC7700F70E62 /* images */,
 				F5BFFA061AA4A63900F3B165 /* BLCAppDelegate.h */,
 				F5BFFA071AA4A63900F3B165 /* BLCAppDelegate.m */,
 				F5BFFA091AA4A63900F3B165 /* BLCViewController.h */,
 				F5BFFA0A1AA4A63900F3B165 /* BLCViewController.m */,
+				F5CF5B701AA55140002A956D /* BLCMainMenuViewController.h */,
+				F5CF5B711AA55140002A956D /* BLCMainMenuViewController.m */,
+				F5DFA18D1AA4D1D900F70E62 /* BLCWhiskeyViewController.h */,
+				F5DFA18E1AA4D1D900F70E62 /* BLCWhiskeyViewController.m */,
 				F5BFFA0F1AA4A63900F3B165 /* Images.xcassets */,
 				F5BFFA111AA4A63900F3B165 /* LaunchScreen.xib */,
 				F5BFFA021AA4A63900F3B165 /* Supporting Files */,
@@ -101,6 +109,9 @@
 		F5BFFA021AA4A63900F3B165 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				54B77B4F1AA61D7E0061164A /* background.png */,
+				54B77B501AA61D7E0061164A /* calculate.png */,
+				54B77B511AA61D7E0061164A /* logo.png */,
 				F5BFFA031AA4A63900F3B165 /* Info.plist */,
 				F5BFFA041AA4A63900F3B165 /* main.m */,
 			);
@@ -204,8 +215,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5DFA1911AA4DC7700F70E62 /* images in Resources */,
 				F5BFFA131AA4A63900F3B165 /* LaunchScreen.xib in Resources */,
+				54B77B541AA61D7E0061164A /* logo.png in Resources */,
+				54B77B521AA61D7E0061164A /* background.png in Resources */,
+				54B77B531AA61D7E0061164A /* calculate.png in Resources */,
 				F5BFFA101AA4A63900F3B165 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BFFA0B1AA4A63900F3B165 /* BLCViewController.m in Sources */,
+				F5CF5B721AA55140002A956D /* BLCMainMenuViewController.m in Sources */,
 				F5DFA18F1AA4D1D900F70E62 /* BLCWhiskeyViewController.m in Sources */,
 				F5BFFA081AA4A63900F3B165 /* BLCAppDelegate.m in Sources */,
 				F5BFFA051AA4A63900F3B165 /* main.m in Sources */,
@@ -297,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -334,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -346,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Alcolator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Alcolator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -376,6 +392,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AlcolatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alcolator.app/Alcolator";
@@ -391,6 +408,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AlcolatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alcolator.app/Alcolator";

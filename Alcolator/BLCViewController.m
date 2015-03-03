@@ -8,7 +8,7 @@
 
 #import "BLCViewController.h"
 
-@interface BLCViewController ()
+@interface BLCViewController () <UITextFieldDelegate>
 /*
 @property (weak, nonatomic) IBOutlet UITextField *beerPercentTextField;
 @property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
@@ -61,7 +61,7 @@
     [super viewDidLoad];
     
     // Set our primary view's background color to lightGrayColor
-     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"images/background.png"]]];
+     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
     // Tells the text field that `self`, this instance of `BLCViewController` should be treated as the text field's delegate
     self.beerPercentTextField.delegate = self;
@@ -81,7 +81,8 @@
     [self.calculateButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     // Set the title of the button
-    [self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
+
+    //[self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
     
     // Tells the tap gesture recognizer to call `[self -tapGestureDidFire:]` when it detects a tap.
     [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
@@ -89,7 +90,8 @@
     // Gets rid of the maximum number of lines on the label
     self.resultLabel.numberOfLines = 0;
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"images/background.png"]]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+    
 }
 
 
@@ -98,20 +100,23 @@
     [super viewWillLayoutSubviews];
     
     CGFloat viewWidth = CGRectGetWidth(self.view.bounds);
-    CGFloat padding = 20;
+    CGFloat padding = 40;
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight = 44;
     
-    self.beerPercentTextField.frame = CGRectMake(20, 20, 280, 44);
     
-    CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
-    self.beerCountSlider.frame = CGRectMake(20, 64 + 20, 280, 44);
+  
+   // CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
+    self.beerCountSlider.frame = CGRectMake(20, 64 + 20, self.view.frame.size.width-padding, 44);
+    
+    self.beerPercentTextField.frame = CGRectMake(20, self.beerCountSlider.frame.origin.y+padding, 280, 44);
     
     CGFloat bottomOfSlider = CGRectGetMaxY(self.beerCountSlider.frame);
-    self.resultLabel.frame = CGRectMake(padding, bottomOfSlider + padding, itemWidth, itemHeight * 4);
-    
+    self.resultLabel.frame = CGRectMake(padding, self.beerPercentTextField.frame.origin.y+self.beerPercentTextField.frame.size.height, itemWidth, itemHeight+padding);
+
     CGFloat bottomOfLabel = CGRectGetMaxY(self.resultLabel.frame);
-    self.calculateButton.frame = CGRectMake(padding, bottomOfLabel + padding, itemWidth, itemHeight);
+    //Changed the frame of view with respect to the bottom of the view so that it displays correctly in vertically/horizontally
+    self.calculateButton.frame = CGRectMake(self.view.center.x-100, self.resultLabel.frame.origin.y+self.resultLabel.frame.size.height+20, 200, itemHeight);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -132,14 +137,15 @@
 
 - (void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
-    
+   //Added the text change
+    self.beerPercentTextField.text = [NSString stringWithFormat:@"%d Beers",(int)sender.value];
     [self.beerPercentTextField resignFirstResponder];
 
 }
 
 - (void)buttonPressed:(UIButton *)sender {
     NSString *sliderValue =
-    [NSString stringWithFormat:@"%f", self.beerCountSlider.value];
+    [NSString stringWithFormat:@"%d Beers", (int)self.beerCountSlider.value];
     self.beerPercentTextField.text = sliderValue;
     
     [self.beerPercentTextField resignFirstResponder];
