@@ -88,7 +88,7 @@
     [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     
     // Gets rid of the maximum number of lines on the label
-    self.resultLabel.numberOfLines = 0;
+    //self.resultLabel.numberOfLines = 0;
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
@@ -140,6 +140,7 @@
    //Added the text change
     self.beerPercentTextField.text = [NSString stringWithFormat:@"%d Beers",(int)sender.value];
     [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 
 }
 
@@ -189,6 +190,17 @@
     self.resultLabel.text = resultText;
     
     }
+- (instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    }
+    
+    return self;
+}
+
 
 
 // Why can't I pull to .m file?
