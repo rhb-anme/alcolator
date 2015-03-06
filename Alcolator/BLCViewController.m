@@ -35,6 +35,7 @@
     UISlider *slider = [[UISlider alloc] init];
     UILabel *label = [[UILabel alloc] init];
     label.textColor = [UIColor darkGrayColor];
+    label.adjustsFontSizeToFitWidth = YES;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setBackgroundImage:[UIImage imageNamed:@"calculate.png"]
                       forState:UIControlStateNormal];
@@ -111,10 +112,10 @@
     
     self.beerPercentTextField.frame = CGRectMake(20, self.beerCountSlider.frame.origin.y+padding, 280, 44);
     
-    CGFloat bottomOfSlider = CGRectGetMaxY(self.beerCountSlider.frame);
+    //CGFloat bottomOfSlider = CGRectGetMaxY(self.beerCountSlider.frame);
     self.resultLabel.frame = CGRectMake(padding, self.beerPercentTextField.frame.origin.y+self.beerPercentTextField.frame.size.height, itemWidth, itemHeight+padding);
 
-    CGFloat bottomOfLabel = CGRectGetMaxY(self.resultLabel.frame);
+    //CGFloat bottomOfLabel = CGRectGetMaxY(self.resultLabel.frame);
     //Changed the frame of view with respect to the bottom of the view so that it displays correctly in vertically/horizontally
     self.calculateButton.frame = CGRectMake(self.view.center.x-100, self.resultLabel.frame.origin.y+self.resultLabel.frame.size.height+20, 200, itemHeight);
 }
